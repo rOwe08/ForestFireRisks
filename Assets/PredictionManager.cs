@@ -24,6 +24,7 @@ public class PredictionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(borders.transform.childCount);
     }
 
     // Update is called once per frame
