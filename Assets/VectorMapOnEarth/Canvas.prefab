@@ -2150,6 +2150,7 @@ RectTransform:
   m_Children:
   - {fileID: 1677019307518856192}
   - {fileID: 3796047089987824910}
+  - {fileID: 4772971237946816210}
   m_Father: {fileID: 1874174333358770418}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
@@ -2319,7 +2320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00034332275, y: -10}
+  m_AnchoredPosition: {x: 0.00064849854, y: -10}
   m_SizeDelta: {x: 115, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2100488958284883392
@@ -2611,7 +2612,7 @@ GameObject:
   - component: {fileID: 2674528403760365963}
   - component: {fileID: 1146249418227319860}
   m_Layer: 5
-  m_Name: DayText
+  m_Name: YearText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2665,7 +2666,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 354a5dbb8eea9754c88623b37e1fa38f, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -2677,7 +2678,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Day:'
+  m_Text: 'Year:'
 --- !u!1 &5001449489138980472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,8 +2838,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MonthManager, Assembly-CSharp
-        m_MethodName: 
+        m_TargetAssemblyTypeName: PredictionManager, Assembly-CSharp
+        m_MethodName: Predict
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3312,7 +3313,7 @@ GameObject:
   - component: {fileID: 7206086787610710449}
   - component: {fileID: 4242805914600225392}
   m_Layer: 5
-  m_Name: AccuracyText
+  m_Name: ChangesText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3334,8 +3335,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -40.94214, y: -25}
+  m_SizeDelta: {x: 118.1158, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7206086787610710449
 CanvasRenderer:
@@ -3366,7 +3367,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 354a5dbb8eea9754c88623b37e1fa38f, type: 3}
     m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
@@ -3378,7 +3379,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Accuracy:'
+  m_Text: 'Changes: '
 --- !u!1 &5657302206926335359
 GameObject:
   m_ObjectHideFlags: 0
@@ -3576,7 +3577,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MonthManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PeriodManager, Assembly-CSharp
         m_MethodName: PreviousMonth
         m_Mode: 1
         m_Arguments:
@@ -4162,8 +4163,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MonthManager, Assembly-CSharp
-        m_MethodName: NextMonth
+        m_TargetAssemblyTypeName: PeriodManager, Assembly-CSharp
+        m_MethodName: NextYear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4406,6 +4407,85 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -70}
   m_SizeDelta: {x: -20, y: 20}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1 &7700030933356535035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4772971237946816210}
+  - component: {fileID: 8261182996028251905}
+  - component: {fileID: 7265858420852237970}
+  m_Layer: 5
+  m_Name: ChangesNumberText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4772971237946816210
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7700030933356535035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3849001440378600728}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 59.058, y: -25}
+  m_SizeDelta: {x: 81.884, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8261182996028251905
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7700030933356535035}
+  m_CullTransparentMesh: 1
+--- !u!114 &7265858420852237970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7700030933356535035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 354a5dbb8eea9754c88623b37e1fa38f, type: 3}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 1.00
 --- !u!1 &7728371044241786654
 GameObject:
   m_ObjectHideFlags: 0
@@ -4577,7 +4657,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MonthManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PeriodManager, Assembly-CSharp
         m_MethodName: NextMonth
         m_Mode: 1
         m_Arguments:
@@ -5546,8 +5626,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MonthManager, Assembly-CSharp
-        m_MethodName: PreviousMonth
+        m_TargetAssemblyTypeName: PeriodManager, Assembly-CSharp
+        m_MethodName: PreviousYear
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

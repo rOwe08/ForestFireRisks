@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PredictionManager : MonoBehaviour
 {
     public Text currentDayText;
-    public Text currentAccuracyText;
+    public Text yearChangesText;
 
     public GameObject earth;
     public GameObject borders;
@@ -40,7 +40,7 @@ public class PredictionManager : MonoBehaviour
         {
             StopCoroutine(predictionCoroutine);
         }
-        predictionCoroutine = StartCoroutine(ChangeDaysCounter());
+        predictionCoroutine = StartCoroutine(ChangeYearsCounter());
     }
 
     private void ChangeBorderColors()
@@ -64,8 +64,28 @@ public class PredictionManager : MonoBehaviour
     {
         return new Color(Random.value, Random.value, Random.value);
     }
+    private float GetValue()
+    {
+        return Random.Range(-1f, 1f);
+    }
+    private void UpdateChangesYear()
+    {
+        float changesValue = GetValue();
+        string formattedValue = changesValue.ToString("F2");
+        yearChangesText.text = formattedValue;
 
-    IEnumerator ChangeDaysCounter()
+        if(changesValue < 0)
+        {
+            yearChangesText.color = Color.blue;
+        }
+        else
+        {
+            yearChangesText.color = Color.red;
+        }
+    }
+
+
+    IEnumerator ChangeYearsCounter()
     {
 
         for (int i = 0; i < daysInMonth[periodManager.currentMonthIndex]; i++)
@@ -73,6 +93,7 @@ public class PredictionManager : MonoBehaviour
             daysElapsed++;
             currentDayText.text = "Days: " + daysElapsed;
 
+            UpdateChangesYear();
             ChangeBorderColors();
 
             yield return new WaitForSeconds(secondsForDay);
