@@ -40,7 +40,7 @@ public class PeriodManager : MonoBehaviour
             "January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
         };
-        currentDayIndex = 27;
+        currentDayIndex = 28;
         currentMonthIndex = 7;
 
         UpdateDayUI();
@@ -60,12 +60,12 @@ public class PeriodManager : MonoBehaviour
     }
     public int get_month()
     {
-        int tempCurrentMonthIndex = currentMonthIndex++;
+        int tempCurrentMonthIndex = currentMonthIndex + 1;
         return tempCurrentMonthIndex;
     }
     public int get_day()
     {
-        return currentDay;
+        return currentDayIndex + 1;
     }
     public void NextDay()
     {

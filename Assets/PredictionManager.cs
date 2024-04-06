@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine.UI;
+using System.Drawing;
 
 public class PredictionManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PredictionManager : MonoBehaviour
     private Coroutine predictionCoroutine;
 
     private Dictionary<string, float> countryPredictionAreas = new Dictionary<string, float>();
+    private float maxValue;
 
     // Start is called before the first frame update
     void Start()
@@ -38,21 +40,23 @@ public class PredictionManager : MonoBehaviour
     public void Predict()
     {
         Debug.Log("Prediction started...");
-        daysElapsed = 0;
-        if (predictionCoroutine != null)
-        {
-            StopCoroutine(predictionCoroutine);
-        }
+        ChangeBorderColors();
 
-        predictionCoroutine = StartCoroutine(ChangePeriodCounter());
+        //daysElapsed = 0;
+        //if (predictionCoroutine != null)
+        //{
+        //    StopCoroutine(predictionCoroutine);
+        //}
+
+        //predictionCoroutine = StartCoroutine(ChangePeriodCounter());
     }
 
     private string GetFileName()
     {
         // Get the current date components
-        int day = periodManager.currentDay;
-        int month = periodManager.currentMonth;
-        int year = periodManager.currentYear;
+        int day = periodManager.get_day();
+        int month = periodManager.get_month();
+        int year = periodManager.get_year();
 
         // Create a DateTime object with the current date components
         DateTime currentDate = new DateTime(year, month, day);
@@ -67,6 +71,7 @@ public class PredictionManager : MonoBehaviour
     }
 
     // Load country prediction areas from CSV file
+    // Load country prediction areas from CSV file
     private void LoadDataFromCSV()
     {
         string csvFileName = GetFileName(); // Get CSV file name
@@ -78,11 +83,11 @@ public class PredictionManager : MonoBehaviour
             // Read all lines from the CSV file
             string[] lines = File.ReadAllLines(csvFilePath);
 
-            // Parse each line of the CSV file
-            foreach (string line in lines)
+            // Skip the first line (header row) and start parsing from the second line
+            for (int i = 1; i < lines.Length; i++)
             {
                 // Split the line into columns using the comma as the delimiter
-                string[] columns = line.Split(',');
+                string[] columns = lines[i].Split(',');
 
                 // Check if the line has the expected number of columns
                 if (columns.Length >= 2)
@@ -106,23 +111,29 @@ public class PredictionManager : MonoBehaviour
         }
     }
 
+
+    // Change border colors based on data from CSV file
     // Change border colors based on data from CSV file
     private void ChangeBorderColors()
     {
         // Load data from CSV file for the current period
         LoadDataFromCSV();
+        maxValue = GetMaxValue();
+        float predictionArea = 0f;
+        UnityEngine.Color boarderColor;
 
         // Loop through all children of the 'borders' GameObject
         foreach (Transform child in borders.transform)
         {
-            // Get country name
-            string countryName = child.name;
+            // Get country name without quotation marks
+            string countryName = child.name.Trim('"'); // Remove quotation marks
 
             // Check if country prediction area exists in dictionary
             if (countryPredictionAreas.ContainsKey(countryName))
             {
                 // Get prediction area for country
-                float predictionArea = countryPredictionAreas[countryName];
+                predictionArea = countryPredictionAreas[countryName];
+                boarderColor = GetColor(predictionArea);
 
                 // Get all MeshRenderers of the current child
                 MeshRenderer[] childRenderers = child.GetComponentsInChildren<MeshRenderer>();
@@ -133,15 +144,66 @@ public class PredictionManager : MonoBehaviour
                     renderer.material.color = GetColor(predictionArea);
                 }
             }
+            else
+            {
+                boarderColor = UnityEngine.Color.black;
+
+                // Get all MeshRenderers of the current child
+                MeshRenderer[] childRenderers = child.GetComponentsInChildren<MeshRenderer>();
+
+                // Change the color of each child's mesh renderers based on prediction area
+                foreach (MeshRenderer renderer in childRenderers)
+                {
+                    renderer.material.color = boarderColor;
+                }
+            }
         }
     }
 
-    // Get color based on prediction area value
-    private Color GetColor(float predictionArea)
+    //private float GetMinValue()
+    //{
+    //    // Initialize the minimum value as the largest possible float value
+    //    float minValue = float.MaxValue;
+
+    //    // Iterate through the values in the dictionary
+    //    foreach (float value in countryPredictionAreas.Values)
+    //    {
+    //        // Update the minimum value if the current value is smaller
+    //        if (value < minValue)
+    //        {
+    //            minValue = value;
+    //        }
+    //    }
+
+    //    return minValue;
+    //}
+
+    private float GetMaxValue()
     {
-        // Example: Implement your logic to map prediction area values to colors here
-        // For simplicity, we'll return a random color
-        return new Color(0f, 0f, 0f);
+        // Initialize the maximum value as the smallest possible float value
+        float maxValue = float.MinValue;
+
+        // Iterate through the values in the dictionary
+        foreach (float value in countryPredictionAreas.Values)
+        {
+            // Update the maximum value if the current value is greater
+            if (value > maxValue)
+            {
+                maxValue = value;
+            }
+        }
+
+        return maxValue;
+    }
+
+    // Get color based on prediction area value
+    private UnityEngine.Color GetColor(float predictionArea)
+    {
+        // Calculate the normalized value between 0 and 1 based on the logarithm
+        float normalizedValue = Mathf.Log10(predictionArea + 1) / Mathf.Log10(maxValue + 1);
+
+        // Interpolate between green and red based on the normalized value
+        return UnityEngine.Color.Lerp(UnityEngine.Color.green, UnityEngine.Color.red, normalizedValue);
     }
 
     IEnumerator ChangePeriodCounter()
