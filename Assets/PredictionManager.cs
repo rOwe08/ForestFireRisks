@@ -8,8 +8,7 @@ using System.Drawing;
 
 public class PredictionManager : MonoBehaviour
 {
-    public Text currentDayText;
-    public Text yearChangesText;
+    public Text currentDateText;
 
     public GameObject earth;
     public GameObject borders;
@@ -25,6 +24,7 @@ public class PredictionManager : MonoBehaviour
     private Dictionary<string, float> countryPredictionAreas = new Dictionary<string, float>();
     private float maxValue;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +39,7 @@ public class PredictionManager : MonoBehaviour
 
     public void PredictForDay()
     {
+        periodManager.UpdateDateUI();
         Debug.Log("Prediction for day started...");
         ChangeBorderColors();
     }
@@ -216,9 +217,7 @@ public class PredictionManager : MonoBehaviour
     {
         for (int i = 0; i < periodManager.daysInMonth[periodManager.currentMonthIndex]; i++)
         {
-            daysElapsed++;
-            currentDayText.text = "Days: " + daysElapsed;
-
+            periodManager.UpdateDateUI();
             ChangeBorderColors();
 
             yield return new WaitForSeconds(secondsForDay);

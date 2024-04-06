@@ -24,6 +24,7 @@ public class PeriodManager : MonoBehaviour
     public Text TextDay;
     public Text TextMonth;
     public Text TextYear;
+    public Text TextDate;
 
     public int[] daysInMonth = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
@@ -128,4 +129,18 @@ public class PeriodManager : MonoBehaviour
         TextYear.text = currentYearName;
         Debug.Log("Current year is: " + currentYearName);
     }
+
+    public void UpdateDateUI()
+    {
+        int day = get_day();
+        int month = get_month();
+        int year = get_year();
+
+        // Format the date as "dd/MM/yyyy"
+        string formattedDate = "Date: " + string.Format("{0:00}/{1:00}/{2}", day, month, year);
+
+        // Update the text of the currentDateText UI element
+        TextDate.text = formattedDate;
+    }
+
 }
