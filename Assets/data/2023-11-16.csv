@@ -1,0 +1,203 @@
+country,pred_area
+Afghanistan,2.4257715
+Armenia,1.3864862
+Australia,2.040992
+Azerbaijan,-0.40302634
+Bangladesh,23.84861
+Bhutan,12.200421
+Brunei Darussalam,7.812329
+Cambodia,5.947476
+China,8.343409
+Fiji Islands,13.860005
+Georgia,12.127586
+India,0.19041309
+Indonesia,8.513735
+Japan,8.256818
+Kazakhstan,8.578093
+Kiribati,12.98236
+Kyrghyzstan,12.451919
+Indonesia,7.7143784
+Thailand,18.467928
+Malaysia,5.6516247
+Maldives,26.527828
+Marshall Islands,3.9867773
+Mauritius,15.894451
+Micronesia,10.806698
+Russia,2.6415532
+Mongolia,1.5064825
+Myanmar,16.773434
+Nepal,4.064713
+New Zealand,5.951191
+North Korea,0.14912236
+Oman,6.872938
+Pakistan,1.4698904
+Palau,6.286982
+Papua New Guinea,21.256807
+Philippines,8.229405
+Samoa,12.73671
+Seychelles Islands,14.689975
+Singapore,5.719449
+Solomon Islands,17.05199
+South Korea,3.676368
+Sri Lanka,5.6723933
+Tajikistan,9.181514
+Thailand,19.960989
+Timor-Leste,14.375563
+Tonga,15.894451
+Turkmenistan,5.6959405
+Tuvalu,11.953525
+United Arab Emirates,-1.2741567
+Uzbekistan,4.3087134
+Vanuatu,12.680011
+Vietnam,2.5442994
+Albania,7.5586605
+Algeria,0.6904311
+Andorra,8.510267
+Angola,19.82414
+Antigua and Barbuda,11.005371
+Argentina,1.8337601
+Armenia,4.8252687
+Austria,8.287712
+Azerbaijan,4.839442
+Bahamas,15.805442
+Bahrain,15.829991
+Barbados,7.812329
+Belarus,18.131338
+Belgium,1.6753914
+Belize,7.1675067
+Benin,6.798366
+Bolivia,1.5432302
+Bosnia and Herzegovina,4.0813403
+Botswana,5.380391
+Brazil,21.308413
+Bulgaria,4.0813403
+Burkina Faso,3.9599879
+Burundi,15.6290245
+Madagascar,18.751904
+Cape Verde,4.3261194
+Cameroon,-1.5614917
+Canada,9.181514
+Central African Republic,5.6723933
+Chad,2.9612787
+Chile,5.1042676
+Bulgaria,5.116283
+Comoros,18.73591
+Congo,5.3450704
+Costa Rica,7.762252
+Croatia,2.032591
+Cuba,11.208813
+Cyprus,0.46892172
+Czech Republic,2.911062
+Democratic Republic of Congo,5.3450704
+Denmark,2.911062
+Djibouti,8.568914
+Dominica,4.5842576
+Dominican Republic,14.235459
+Ecuador,6.736357
+Egypt,56.207203
+El Salvador,11.76501
+Equatorial Guinea,7.2625566
+Eritrea,3.8140914
+Estonia,7.138306
+Swaziland,5.828412
+Ethiopia,3.2250197
+Finland,8.578093
+France,2.911062
+Gabon,4.516433
+Gambia,2.997804
+Georgia,3.6064363
+Germany,8.510267
+Ghana,14.893416
+Greece,4.0582414
+Grenada,4.516433
+Guatemala,8.981099
+Guinea,12.475864
+Guinea-Bissau,13.450687
+Guyana,10.915029
+Haiti,5.053547
+Vatican City,3.3468058
+Honduras,9.489085
+Hungary,16.064806
+Iceland,10.507264
+Iran,0.60381335
+Iraq,0.5824565
+Ireland,4.390708
+Israel,11.506529
+Italy,3.3468058
+Jamaica,12.679306
+Jordan,-1.4620659
+Kenya,2.6121247
+Kuwait,7.9326234
+Latvia,25.906538
+Lebanon,14.24615
+Lesotho,0.76009476
+Liberia,17.679054
+Liechtenstein,0.23560238
+Lithuania,26.924881
+Luxembourg,6.0658402
+Madagascar,-1.0242227
+Malawi,9.56531
+Mali,0.43530938
+Malta,-0.0037350152
+Mauritania,2.2327793
+Mauritius,8.679964
+Mexico,9.737903
+Monaco,3.852732
+Montenegro,1.9760606
+Morocco,-1.4977057
+Mozambique,16.44405
+Namibia,18.926817
+Turkey,2.032591
+Netherlands,1.8998351
+Nicaragua,12.528062
+Niger,12.036304
+Nigeria,9.635124
+Macedonia,1.8998351
+Norway,6.659547
+Oman,14.785741
+Bolivia,19.41861
+Panama,6.653663
+Paraguay,21.308413
+Peru,17.19859
+Poland,8.510267
+Portugal,10.748578
+Qatar,8.885588
+Romania,6.1877365
+Russia,7.5697165
+Rwanda,19.424603
+Saint Kitts and Nevis,14.041749
+Saint Lucia,4.516433
+Saint Vincent and the Grenadines,4.5842576
+San Marino,4.851627
+Belgium,2.2086108
+Saudi Arabia,11.601761
+Senegal,18.35364
+Serbia,16.557625
+Seychelles Islands,13.593278
+Sierra Leone,21.998356
+Slovakia,6.7840176
+Slovenia,1.9417756
+Somalia,13.1858015
+South Africa,47.24809
+Sudan,16.166473
+Spain,6.406409
+Sudan,2.9612787
+Suriname,7.2833257
+Sweden,8.578093
+Switzerland,11.241174
+Syria,-0.27307963
+Tanzania,22.706015
+Bulgaria,5.7479315
+Trinidad and Tobago,7.984734
+Tunisia,-0.0037350152
+Turkey,3.676368
+Uganda,8.291254
+Ukraine,7.0704813
+United Arab Emirates,13.191582
+United Kingdom,4.390708
+United States of America,3.7698066
+Uruguay,6.455515
+Venezuela,14.971522
+Yemen,10.467722
+Zambia,5.1294208
+Zimbabwe,4.4763737

@@ -1,0 +1,197 @@
+country,pred_area
+Afghanistan,1.3433875
+Australia,-0.16507797
+Bangladesh,10.394004
+Bhutan,3.2557821
+Brunei Darussalam,7.931973
+Cambodia,12.165569
+China,5.6002645
+Fiji Islands,1.697246
+India,3.7762296
+Indonesia,-0.036183886
+Japan,14.35985
+Kazakhstan,5.530749
+Kiribati,3.113615
+Kyrghyzstan,3.326836
+Indonesia,9.3375635
+Thailand,8.832137
+Malaysia,1.9565567
+Maldives,-5.109823
+Marshall Islands,-3.4162223
+Micronesia,-2.2010436
+Russia,0.95914483
+Mongolia,4.8239307
+Myanmar,5.695081
+Nepal,1.2138975
+New Zealand,-0.13650689
+North Korea,5.4275007
+Pakistan,14.530233
+Palau,1.6764771
+Papua New Guinea,7.952742
+Philippines,7.7241244
+Samoa,-2.6398954
+Singapore,0.37784117
+Solomon Islands,1.9773251
+South Korea,7.011281
+Sri Lanka,7.6166477
+Tajikistan,3.1879568
+Thailand,13.380749
+Timor-Leste,8.183804
+Tonga,7.294468
+Turkmenistan,4.0745363
+Tuvalu,10.713407
+Uzbekistan,18.51954
+Vanuatu,0.42861277
+Vietnam,5.673433
+Afghanistan,-0.8547568
+Albania,3.3042593
+Algeria,5.6889043
+Andorra,10.486698
+Angola,-0.21484624
+Antigua and Barbuda,2.045685
+Argentina,8.70039
+Armenia,1.6497093
+Austria,8.085863
+Azerbaijan,6.7448525
+Bahamas,0.47254604
+Bahrain,2.7466853
+Barbados,-3.0998745
+Belarus,6.201494
+Belgium,4.4482155
+Belize,1.697246
+Benin,3.867913
+Bolivia,2.8878663
+Bosnia and Herzegovina,0.09674005
+Botswana,2.849096
+Brazil,17.664358
+Bulgaria,7.6879945
+Burkina Faso,30.596926
+Burundi,3.4690926
+Madagascar,21.141808
+Cape Verde,4.2230887
+Cameroon,8.17927
+Canada,3.4861789
+Central African Republic,3.488957
+Chad,8.519128
+Chile,4.238781
+Bulgaria,6.9979935
+Comoros,16.369003
+Congo,1.9650629
+Costa Rica,2.5520222
+Croatia,3.1879568
+Cuba,-0.32183364
+Cyprus,0.73772156
+Czech Republic,7.8222895
+Democratic Republic of Congo,-0.08684853
+Denmark,6.201494
+Djibouti,-2.1751
+Dominica,-0.6782229
+Dominican Republic,-4.903904
+Ecuador,2.0335166
+Egypt,-0.5941405
+El Salvador,2.0602107
+Equatorial Guinea,6.0114636
+Eritrea,12.192258
+Estonia,8.430306
+Swaziland,-0.7642155
+Ethiopia,8.496674
+Finland,6.269319
+France,0.44648582
+Gabon,0.03369405
+Gambia,2.863007
+Georgia,9.958859
+Germany,1.8457254
+Ghana,3.867913
+Greece,-0.88216
+Grenada,-1.8737274
+Guatemala,4.3789845
+Guinea,7.931973
+Guinea-Bissau,0.062157642
+Guyana,1.5343673
+Haiti,0.44408688
+Vatican City,17.075169
+Honduras,0.14876607
+Hungary,21.149525
+Iceland,8.31558
+Iran,11.191885
+Iraq,2.8243318
+Ireland,4.795563
+Israel,6.6069164
+Italy,17.075169
+Jamaica,1.2713515
+Jordan,5.1265883
+Kenya,6.126243
+Kuwait,-0.18722166
+Latvia,8.430306
+Lebanon,1.4328278
+Lesotho,0.90171653
+Liberia,5.10732
+Liechtenstein,5.889817
+Lithuania,6.201494
+Luxembourg,1.5681885
+Madagascar,-0.3858376
+Malawi,5.206249
+Mali,6.0530047
+Malta,3.266062
+Mauritania,27.072046
+Mauritius,7.294468
+Mexico,6.678495
+Monaco,7.512691
+Montenegro,3.1879568
+Morocco,1.4645962
+Mozambique,2.591154
+Namibia,3.1445057
+Turkey,1.3466533
+Netherlands,5.0171633
+Nicaragua,1.5343673
+Niger,6.978633
+Nigeria,2.045685
+Macedonia,3.1879568
+Norway,2.394708
+Oman,8.952305
+Bolivia,16.827837
+Panama,7.8758416
+Paraguay,-0.015415132
+Peru,34.831
+Poland,8.430306
+Portugal,-0.18722166
+Qatar,48.593533
+Romania,8.498132
+Russia,6.269319
+Rwanda,0.79514706
+Saint Kitts and Nevis,3.1912093
+Saint Lucia,1.1392972
+Saint Vincent and the Grenadines,0.6872021
+San Marino,3.1879568
+Belgium,6.6770277
+Saudi Arabia,7.51663
+Senegal,4.2230887
+Serbia,8.430306
+Seychelles Islands,-3.4162223
+Sierra Leone,2.8472013
+Slovakia,21.149525
+Slovenia,7.6879945
+Somalia,0.9290916
+South Africa,2.0923057
+Sudan,5.151816
+Spain,6.716884
+Sudan,6.0530047
+Suriname,-0.5945749
+Sweden,6.269319
+Switzerland,-0.9470906
+Syria,7.273944
+Tanzania,2.2938776
+Bulgaria,5.3924527
+Trinidad and Tobago,6.5192485
+Tunisia,0.020401012
+Turkey,4.0745363
+Uganda,4.614367
+Ukraine,8.430306
+United Arab Emirates,11.181913
+United Kingdom,7.273944
+United States of America,3.1879568
+Uruguay,4.0960445
+Venezuela,-0.51754373
+Yemen,-0.77336514
+Zambia,4.7960253
+Zimbabwe,14.2004175

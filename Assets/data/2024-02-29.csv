@@ -1,0 +1,202 @@
+country,pred_area
+Australia,10.722827
+Brunei Darussalam,15.394371
+Cambodia,19.344109
+China,5.581452
+Fiji Islands,6.6918373
+Indonesia,15.379845
+Japan,8.729333
+Kiribati,2.130921
+Indonesia,6.706358
+Thailand,4.8807917
+Malaysia,7.192126
+Marshall Islands,1.8901211
+Micronesia,1.8901211
+Mongolia,2.6687157
+New Zealand,-1.188801
+North Korea,6.4358735
+Palau,4.5891895
+Papua New Guinea,4.6362453
+Philippines,5.2460938
+Samoa,6.956946
+Singapore,19.004604
+Solomon Islands,3.4202468
+South Korea,3.0937014
+Thailand,11.995839
+Timor-Leste,11.341133
+Tonga,11.273308
+Tuvalu,1.8222958
+Vanuatu,3.0275016
+Vietnam,1.7486887
+Afghanistan,4.725017
+Albania,4.537187
+Algeria,5.266269
+Andorra,1.3741896
+Angola,9.858036
+Antigua and Barbuda,4.822047
+Argentina,10.658927
+Armenia,-0.66431713
+Austria,6.093241
+Azerbaijan,3.8310525
+Bahamas,6.116747
+Bahrain,3.514047
+Bangladesh,13.072892
+Barbados,4.822047
+Belarus,4.9457045
+Belgium,2.446699
+Belize,2.296526
+Benin,18.071035
+Bhutan,3.7632272
+Bolivia,4.6013246
+Bosnia and Herzegovina,4.341778
+Botswana,-0.7286027
+Brazil,12.481241
+Bulgaria,10.570093
+Burkina Faso,20.059145
+Burundi,5.9494257
+Madagascar,11.24384
+Cape Verde,1.3589455
+Cambodia,12.199281
+Cameroon,8.221981
+Canada,9.020959
+Central African Republic,20.020948
+Chad,20.059145
+Chile,2.6572056
+Bulgaria,6.913603
+Comoros,12.807205
+Congo,14.8434725
+Costa Rica,5.014052
+Croatia,6.4022975
+Cuba,15.7062435
+Cyprus,1.5985175
+Czech Republic,4.1599855
+Democratic Republic of Congo,14.8434725
+Denmark,7.728844
+Djibouti,8.515765
+Dominica,2.0986385
+Dominican Republic,10.043662
+Ecuador,-5.2498207
+Egypt,6.168769
+El Salvador,1.4913194
+Equatorial Guinea,9.917345
+Eritrea,3.42184
+Estonia,8.228944
+Senegal,20.059145
+Ethiopia,-1.7276831
+Finland,6.7891545
+France,8.9361725
+Gabon,17.062176
+Gambia,2.9728162
+Georgia,6.147776
+Germany,14.251474
+Ghana,7.714873
+Greece,6.121798
+Grenada,5.8814383
+Guatemala,41.774265
+Guinea,8.992156
+Guinea-Bissau,16.583868
+Guyana,1.7821767
+Haiti,-3.3533218
+Vatican City,5.8497677
+Honduras,3.063715
+Hungary,6.913603
+Iceland,7.464753
+India,3.2206602
+Indonesia,1.9827467
+Iran,6.538824
+Iraq,-2.04051
+Ireland,6.289057
+Israel,9.263781
+Italy,5.8497677
+Jamaica,13.082729
+Jordan,9.225181
+Kazakhstan,5.581452
+Kenya,5.7175083
+Kuwait,-0.3470589
+Kyrghyzstan,3.8310525
+Indonesia,13.77351
+Latvia,8.228944
+Lebanon,-4.14382
+Lesotho,1.968383
+Liberia,8.621997
+Thailand,6.2053843
+Liechtenstein,6.5404406
+Lithuania,3.7632272
+Luxembourg,9.550518
+Madagascar,2.9729688
+Malawi,10.348067
+Maldives,20.248224
+Mali,20.059145
+Malta,4.455061
+Mauritania,5.6472363
+Mauritius,8.953
+Mexico,-4.8896203
+Iran,-0.7956265
+Monaco,5.4489408
+Montenegro,3.7831404
+Morocco,-0.98056287
+Mozambique,12.850299
+Myanmar,15.562379
+Namibia,-0.19753742
+Turkey,6.262701
+Nepal,5.237374
+Netherlands,5.9196043
+Nicaragua,3.7958162
+Niger,20.059145
+Nigeria,15.628257
+Macedonia,3.43451
+Norway,6.7891545
+Oman,5.5370774
+Pakistan,4.132347
+Bolivia,7.8368025
+Panama,16.436895
+Paraguay,17.340714
+Peru,24.446426
+Poland,8.896317
+Portugal,6.913603
+Qatar,2.7713225
+Romania,4.120129
+Russia,5.9610586
+Rwanda,-0.18932866
+Saint Kitts and Nevis,8.515765
+Saint Lucia,4.3149405
+Saint Vincent and the Grenadines,5.8814383
+San Marino,2.3849337
+Belgium,5.9196043
+Saudi Arabia,4.410755
+Senegal,10.012196
+Serbia,5.8862095
+Seychelles Islands,17.062176
+Sierra Leone,1.4913194
+Slovakia,10.203263
+Slovenia,6.67743
+Somalia,9.98517
+South Africa,0.86343384
+Sudan,20.059145
+Spain,3.6005673
+Sri Lanka,11.656331
+Sudan,10.787035
+Suriname,11.109488
+Sweden,8.296769
+Switzerland,12.597366
+Syria,9.074982
+Tajikistan,2.4933536
+Tanzania,4.110611
+Thailand,11.995839
+Slovenia,0.53423405
+Trinidad and Tobago,0.9549129
+Tunisia,8.451802
+Turkey,0.8592143
+Turkmenistan,6.0111456
+Uganda,0.17800784
+Ukraine,6.1758432
+United Arab Emirates,3.5793715
+United Kingdom,1.9681731
+United States of America,6.769839
+Uruguay,12.629363
+Uzbekistan,2.7867377
+Venezuela,5.0254893
+Vietnam,8.749509
+Yemen,-2.0076902
+Zambia,4.458167
+Zimbabwe,1.4438983

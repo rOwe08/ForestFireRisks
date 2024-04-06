@@ -8,18 +8,30 @@ public class PeriodManager : MonoBehaviour
     public List<string> years;
     public List<string> months;
 
+    public int currentDay;
+    public int currentDayIndex;
+
+    public int currentMonth;
     public int currentMonthIndex;
+
+    public int currentYear;
     public int currentYearIndex;
+
     public string currentMonthName;
-    public string currentYear;
+    public string currentYearName;
+    public string currentDayName;
+
+    public Text TextDay;
     public Text TextMonth;
     public Text TextYear;
+
+    public int[] daysInMonth = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
     // Start is called before the first frame update
     void Start()
     {
         years = new List<string>();
-        for (int i = 2000; i <= 2024; i++)
+        for (int i = 2023; i <= 2024; i++)
         {
             years.Add(i.ToString());
         }
@@ -28,10 +40,12 @@ public class PeriodManager : MonoBehaviour
             "January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
         };
-        currentMonthIndex = 0;
-        currentYearIndex = 0;
-        UpdateMonth();
-        UpdateYear();
+        currentDayIndex = 27;
+        currentMonthIndex = 7;
+
+        UpdateDayUI();
+        UpdateMonthUI();
+        UpdateYearUI();
     }
 
     // Update is called once per frame
@@ -40,45 +54,78 @@ public class PeriodManager : MonoBehaviour
 
     }
 
+    public int get_year()
+    {
+        return System.Convert.ToInt32(years[currentYearIndex]);
+    }
+    public int get_month()
+    {
+        int tempCurrentMonthIndex = currentMonthIndex++;
+        return tempCurrentMonthIndex;
+    }
+    public int get_day()
+    {
+        return currentDay;
+    }
+    public void NextDay()
+    {
+        currentDayIndex = (currentDayIndex + 1) % daysInMonth[currentMonthIndex];
+        UpdateDayUI();
+    }
+
+    // Function to decrement current month index
+    public void PreviousDay()
+    {
+        currentDayIndex = (currentDayIndex - 1 + daysInMonth[currentMonthIndex]) % daysInMonth[currentMonthIndex];
+        
+        UpdateDayUI();
+    }
+
     // Function to increment current month index
     public void NextMonth()
     {
         currentMonthIndex = (currentMonthIndex + 1) % 12;
-        UpdateMonth();
+        UpdateMonthUI();
     }
 
     // Function to decrement current month index
     public void PreviousMonth()
     {
         currentMonthIndex = (currentMonthIndex - 1 + 12) % 12;
-        UpdateMonth();
+        UpdateMonthUI();
     }
 
     // Function to increment current year index
     public void NextYear()
     {
         currentYearIndex = (currentYearIndex + 1) % years.Count;
-        UpdateYear();
+        UpdateYearUI();
     }
 
     // Function to decrement current year index
     public void PreviousYear()
     {
         currentYearIndex = (currentYearIndex - 1 + years.Count) % years.Count;
-        UpdateYear();
+        UpdateYearUI();
     }
 
-    public void UpdateMonth()
+    public void UpdateDayUI()
+    {
+        currentDayName = System.Convert.ToString(currentDayIndex + 1);
+        TextDay.text = currentDayName;
+        Debug.Log("Current day is: " + currentDayName);
+    }
+    public void UpdateMonthUI()
     {
         currentMonthName = months[currentMonthIndex];
         TextMonth.text = currentMonthName;
         Debug.Log("Current month is: " + currentMonthName);
     }
 
-    public void UpdateYear()
+    public void UpdateYearUI()
     {
-        currentYear = years[currentYearIndex];
-        TextYear.text = currentYear;
-        Debug.Log("Current year is: " + currentYear);
+        currentYearName = years[currentYearIndex];
+        TextYear.text = currentYearName;
+        Debug.Log("Current year is: " + currentYearName);
     }
 }

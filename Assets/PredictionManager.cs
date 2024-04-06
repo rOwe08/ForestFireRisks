@@ -1,6 +1,8 @@
+using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System.IO;
 using UnityEngine.UI;
 
 public class PredictionManager : MonoBehaviour
@@ -16,10 +18,10 @@ public class PredictionManager : MonoBehaviour
     [SerializeField]
     private float secondsForDay = 1.0f;
 
-    private int[] daysInMonth = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-
     private int daysElapsed;
     private Coroutine predictionCoroutine;
+
+    private Dictionary<string, float> countryPredictionAreas = new Dictionary<string, float>();
 
     // Start is called before the first frame update
     void Start()
@@ -41,60 +43,114 @@ public class PredictionManager : MonoBehaviour
         {
             StopCoroutine(predictionCoroutine);
         }
-        predictionCoroutine = StartCoroutine(ChangeYearsCounter());
+
+        predictionCoroutine = StartCoroutine(ChangePeriodCounter());
     }
 
+    private string GetFileName()
+    {
+        // Get the current date components
+        int day = periodManager.currentDay;
+        int month = periodManager.currentMonth;
+        int year = periodManager.currentYear;
+
+        // Create a DateTime object with the current date components
+        DateTime currentDate = new DateTime(year, month, day);
+
+        // Format the date as "yyyy-MM-dd"
+        string formattedDate = currentDate.ToString("yyyy-MM-dd");
+
+        // Append ".csv" to the formatted date
+        string fileName = formattedDate + ".csv";
+
+        return fileName;
+    }
+
+    // Load country prediction areas from CSV file
+    private void LoadDataFromCSV()
+    {
+        string csvFileName = GetFileName(); // Get CSV file name
+        string csvFilePath = Path.Combine(Application.dataPath, "data", csvFileName); // Get CSV file path
+
+        // Check if CSV file exists
+        if (File.Exists(csvFilePath))
+        {
+            // Read all lines from the CSV file
+            string[] lines = File.ReadAllLines(csvFilePath);
+
+            // Parse each line of the CSV file
+            foreach (string line in lines)
+            {
+                // Split the line into columns using the comma as the delimiter
+                string[] columns = line.Split(',');
+
+                // Check if the line has the expected number of columns
+                if (columns.Length >= 2)
+                {
+                    // Parse country name
+                    string countryName = columns[0];
+
+                    // Parse prediction area value
+                    float predictionArea;
+                    if (float.TryParse(columns[1], out predictionArea))
+                    {
+                        // Add country prediction area to dictionary
+                        countryPredictionAreas[countryName] = predictionArea;
+                    }
+                }
+            }
+        }
+        else
+        {
+            Debug.LogError("CSV file not found: " + csvFilePath);
+        }
+    }
+
+    // Change border colors based on data from CSV file
     private void ChangeBorderColors()
     {
+        // Load data from CSV file for the current period
+        LoadDataFromCSV();
+
         // Loop through all children of the 'borders' GameObject
         foreach (Transform child in borders.transform)
         {
-            // Get all MeshRenderers of the current child
-            MeshRenderer[] childRenderers = child.GetComponentsInChildren<MeshRenderer>();
+            // Get country name
+            string countryName = child.name;
 
-            // Change the color of each child's mesh renderers to random colors
-            foreach (MeshRenderer renderer in childRenderers)
+            // Check if country prediction area exists in dictionary
+            if (countryPredictionAreas.ContainsKey(countryName))
             {
-                Color newColor = GetColor(child.name);
-                renderer.material.color = newColor;
+                // Get prediction area for country
+                float predictionArea = countryPredictionAreas[countryName];
+
+                // Get all MeshRenderers of the current child
+                MeshRenderer[] childRenderers = child.GetComponentsInChildren<MeshRenderer>();
+
+                // Change the color of each child's mesh renderers based on prediction area
+                foreach (MeshRenderer renderer in childRenderers)
+                {
+                    renderer.material.color = GetColor(predictionArea);
+                }
             }
         }
     }
 
-    private Color GetColor(string countryName)
+    // Get color based on prediction area value
+    private Color GetColor(float predictionArea)
     {
-        return new Color(Random.value, Random.value, Random.value);
-    }
-    private float GetValue()
-    {
-        return Random.Range(-1f, 1f);
-    }
-    private void UpdateChangesYear()
-    {
-        float changesValue = GetValue();
-        string formattedValue = changesValue.ToString("F2");
-        yearChangesText.text = formattedValue;
-
-        if(changesValue < 0)
-        {
-            yearChangesText.color = Color.blue;
-        }
-        else
-        {
-            yearChangesText.color = Color.red;
-        }
+        // Example: Implement your logic to map prediction area values to colors here
+        // For simplicity, we'll return a random color
+        return new Color(0f, 0f, 0f);
     }
 
-
-    IEnumerator ChangeYearsCounter()
+    IEnumerator ChangePeriodCounter()
     {
-
-        for (int i = 0; i < daysInMonth[periodManager.currentMonthIndex]; i++)
+        for (int i = 0; i < periodManager.daysInMonth[periodManager.currentMonthIndex]; i++)
         {
             daysElapsed++;
             currentDayText.text = "Days: " + daysElapsed;
 
-            UpdateChangesYear();
             ChangeBorderColors();
 
             yield return new WaitForSeconds(secondsForDay);

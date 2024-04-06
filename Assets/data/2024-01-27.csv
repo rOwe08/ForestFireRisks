@@ -1,0 +1,200 @@
+country,pred_area
+Australia,2.0339503
+Bangladesh,13.161282
+Bhutan,8.663678
+Brunei Darussalam,20.180758
+Cambodia,13.367672
+China,11.466636
+Fiji Islands,10.967525
+Indonesia,6.713051
+Japan,15.523297
+Kazakhstan,16.196352
+Kiribati,16.25378
+Kyrghyzstan,10.840134
+Indonesia,-2.9473264
+Thailand,9.344833
+Malaysia,20.093596
+Marshall Islands,11.133072
+Micronesia,13.28458
+Mongolia,9.055077
+Myanmar,54.77267
+New Zealand,-0.8567889
+North Korea,10.840134
+Palau,50.864918
+Papua New Guinea,17.847263
+Philippines,13.710288
+Samoa,8.919338
+Singapore,17.905056
+Solomon Islands,14.487051
+South Korea,10.840134
+Thailand,18.595606
+Timor-Leste,5.732901
+Tonga,10.967525
+Tuvalu,12.896756
+Vanuatu,6.5045776
+Vietnam,17.237577
+Afghanistan,9.775355
+Albania,7.5065856
+Algeria,7.054876
+Andorra,11.147839
+Angola,7.3166356
+Antigua and Barbuda,16.368235
+Argentina,12.359003
+Armenia,16.196352
+Austria,16.669827
+Azerbaijan,3.5896883
+Bahamas,15.994037
+Bahrain,-0.19114771
+Bangladesh,14.100817
+Barbados,13.408774
+Belarus,14.279943
+Belgium,15.10016
+Belize,10.730658
+Benin,2.3536787
+Bhutan,9.333203
+Bolivia,8.175913
+Bosnia and Herzegovina,13.496669
+Botswana,18.879692
+Brazil,0.7636734
+Bulgaria,15.378527
+Burkina Faso,2.4508405
+Burundi,-4.9645386
+Madagascar,18.72307
+Cape Verde,6.3717833
+Cameroon,9.980345
+Canada,9.333203
+Central African Republic,0.4817385
+Chad,28.388182
+Chile,12.077344
+Bulgaria,13.945654
+Comoros,10.329852
+Congo,13.408774
+Costa Rica,14.143777
+Croatia,10.959134
+Cuba,17.03648
+Cyprus,9.87901
+Czech Republic,15.708718
+Democratic Republic of Congo,13.408774
+Denmark,5.056763
+Djibouti,7.2100754
+Dominica,10.809905
+Dominican Republic,11.11357
+Ecuador,6.7020774
+Egypt,9.023252
+El Salvador,13.848074
+Equatorial Guinea,12.041195
+Eritrea,1.6736368
+Estonia,16.196352
+Swaziland,20.336555
+Ethiopia,0.784225
+Finland,16.196352
+France,15.516494
+Gabon,9.852657
+Gambia,15.950953
+Georgia,10.840134
+Germany,17.703287
+Ghana,5.3655815
+Greece,12.469488
+Grenada,10.401497
+Guatemala,16.00607
+Guinea,11.780234
+Guinea-Bissau,16.30912
+Guyana,13.170813
+Haiti,5.3655815
+Vatican City,2.3710608
+Honduras,20.208601
+Hungary,3.8844628
+Iceland,16.196352
+India,5.8242984
+Iran,13.995007
+Iraq,7.6287694
+Ireland,16.978382
+Israel,3.363548
+Italy,2.3710608
+Jamaica,10.516122
+Jordan,4.5878882
+Kazakhstan,16.196352
+Kenya,84.1764
+Kuwait,13.47619
+Kyrghyzstan,15.651756
+Latvia,17.354292
+Lebanon,13.884008
+Lesotho,10.688689
+Liberia,12.995888
+Liechtenstein,10.1706085
+Lithuania,10.840134
+Luxembourg,17.703287
+Madagascar,-3.1413298
+Malawi,42.139282
+Maldives,21.095215
+Mali,2.348624
+Malta,3.639258
+Mauritania,1.797662
+Mauritius,11.045907
+Mexico,23.581285
+Iran,13.600314
+Monaco,3.9503615
+Montenegro,19.469267
+Morocco,3.5367231
+Mozambique,20.495996
+Namibia,102.54132
+Turkey,3.3329284
+Nepal,6.101765
+Netherlands,17.418348
+Nicaragua,11.780234
+Niger,2.60047
+Nigeria,11.796372
+Macedonia,5.0272474
+Norway,17.703287
+Oman,16.02684
+Pakistan,6.099354
+Bolivia,8.1334095
+Panama,12.746137
+Paraguay,16.114922
+Peru,18.088501
+Poland,16.196352
+Portugal,7.054876
+Qatar,55.982876
+Romania,10.1706085
+Russia,16.196352
+Rwanda,14.856487
+Saint Kitts and Nevis,16.164791
+Saint Lucia,13.718337
+Saint Vincent and the Grenadines,13.408774
+San Marino,17.474949
+Switzerland,15.74447
+Saudi Arabia,16.415733
+Senegal,20.777813
+Serbia,15.516494
+Seychelles Islands,8.801031
+Sierra Leone,12.607499
+Slovakia,15.516494
+Slovenia,15.786875
+Somalia,14.273483
+South Africa,19.652262
+Sudan,14.502011
+Spain,14.021867
+Sri Lanka,20.180758
+Sudan,18.12784
+Suriname,12.294419
+Sweden,17.703287
+Switzerland,17.759888
+Syria,7.832941
+Tajikistan,1.2529519
+Tanzania,11.528962
+Slovenia,5.1532145
+Trinidad and Tobago,17.892427
+Tunisia,9.039826
+Turkey,15.224808
+Turkmenistan,3.14035
+Uganda,19.88051
+Ukraine,16.196352
+United Arab Emirates,12.953351
+United Kingdom,3.14035
+United States of America,9.333203
+Uruguay,5.0106473
+Uzbekistan,17.703287
+Venezuela,12.006408
+Yemen,2.4559543
+Zambia,8.472466
+Zimbabwe,8.283549

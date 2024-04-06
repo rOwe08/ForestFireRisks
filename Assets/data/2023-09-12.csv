@@ -1,0 +1,207 @@
+country,pred_area
+Afghanistan,6.5423684
+Albania,-0.4943996
+Andorra,-0.39081174
+Angola,19.511696
+Armenia,9.89641
+Australia,2.9679313
+Austria,14.426011
+Azerbaijan,7.472888
+Bahrain,48.135384
+Bangladesh,51.55678
+Belarus,-1.7513298
+Belgium,24.421606
+Benin,35.430107
+Bhutan,-0.091101155
+Bosnia and Herzegovina,3.5700939
+Botswana,16.403503
+Brunei Darussalam,13.3220825
+Bulgaria,9.661765
+Burundi,55.485256
+Madagascar,17.483995
+Cambodia,37.470375
+Cameroon,3.5648317
+Central African Republic,15.774878
+Chad,22.045984
+China,0.8746524
+Bulgaria,9.494652
+Comoros,13.755618
+Congo,32.769638
+Croatia,4.7251234
+Cyprus,36.581352
+Czech Republic,17.228886
+Denmark,7.472888
+Djibouti,42.30537
+Egypt,62.812172
+Equatorial Guinea,35.412384
+Eritrea,-0.3010824
+Estonia,6.7046905
+Swaziland,9.09923
+Ethiopia,-0.18374182
+Fiji Islands,50.410877
+Finland,6.7035694
+France,15.656456
+Georgia,3.5700939
+Germany,-0.4120502
+Greece,46.331997
+Vatican City,44.543777
+Hungary,4.7251234
+India,30.298931
+Indonesia,22.045984
+Iran,38.009136
+Iraq,59.19662
+Israel,58.86398
+Italy,44.543777
+Japan,44.158463
+Jordan,31.171434
+Kazakhstan,9.627328
+Kenya,10.870498
+Kiribati,45.631245
+Kuwait,64.20743
+Kyrghyzstan,3.2789013
+Indonesia,15.957989
+Latvia,5.3937597
+Lebanon,43.479774
+Lesotho,9.353144
+Thailand,30.266685
+Liechtenstein,-0.4943996
+Lithuania,8.021292
+Luxembourg,45.41721
+Madagascar,6.7883453
+Malawi,12.558077
+Malaysia,49.84563
+Maldives,53.3737
+Malta,13.389908
+Marshall Islands,46.598457
+Mauritius,19.44387
+Micronesia,46.9547
+Russia,8.735491
+Monaco,25.906624
+Mongolia,1.3747023
+Montenegro,10.054198
+Morocco,16.87733
+Mozambique,21.631186
+Myanmar,46.224762
+Namibia,19.373083
+Turkey,20.508303
+Nepal,17.918541
+Netherlands,24.421606
+New Zealand,13.639062
+Niger,46.141987
+Nigeria,14.520783
+North Korea,17.986366
+Macedonia,4.635362
+Norway,9.661765
+Oman,47.390385
+Pakistan,34.21056
+Palau,35.430107
+Papua New Guinea,36.599075
+Philippines,52.67126
+Poland,-0.4943996
+Qatar,47.220688
+Romania,20.5711
+Russia,9.0314045
+Rwanda,24.039284
+Samoa,53.457672
+San Marino,8.18869
+Belgium,16.87733
+Saudi Arabia,65.74905
+Serbia,17.741758
+Seychelles Islands,53.810776
+Singapore,51.88509
+Slovakia,14.304022
+Slovenia,3.5189629
+Solomon Islands,47.31154
+Somalia,46.322906
+South Africa,15.105884
+South Korea,18.35709
+Sudan,43.601223
+Spain,12.110724
+Sri Lanka,35.497932
+Sudan,42.934696
+Sweden,10.639434
+Switzerland,4.7251234
+Syria,27.826733
+Tajikistan,20.044443
+Tanzania,23.840069
+Thailand,49.860157
+Timor-Leste,47.783005
+Bulgaria,34.92708
+Tonga,36.581352
+Turkey,9.5948305
+Turkmenistan,23.979143
+Tuvalu,45.429485
+Uganda,-1.4510236
+Ukraine,18.501896
+United Arab Emirates,54.623905
+United Kingdom,24.545723
+Uzbekistan,5.6615906
+Vanuatu,36.599075
+Vietnam,51.88509
+Yemen,1.3932705
+Zambia,14.300721
+Zimbabwe,10.273257
+Algeria,30.33451
+Angola,19.511696
+Antigua and Barbuda,42.76923
+Argentina,14.823123
+Bahamas,53.457672
+Barbados,45.05617
+Belize,45.02961
+Benin,7.041914
+Bolivia,8.794915
+Brazil,60.28204
+Burkina Faso,47.711414
+Cape Verde,51.528847
+Cameroon,6.4454207
+Canada,23.009483
+Central African Republic,30.266685
+Chad,52.059734
+Chile,11.065124
+Congo,32.884285
+Costa Rica,19.44387
+Cuba,44.31945
+Democratic Republic of Congo,32.884285
+Dominica,47.31154
+Dominican Republic,47.711414
+Ecuador,8.924471
+El Salvador,45.05617
+Equatorial Guinea,46.224762
+Gabon,35.412384
+Gambia,44.158463
+Ghana,19.44387
+Grenada,47.711414
+Guatemala,34.08713
+Guinea,44.090637
+Guinea-Bissau,52.67126
+Guyana,43.955276
+Haiti,46.455524
+Honduras,41.773724
+Iceland,13.878335
+Ireland,6.4195166
+Jamaica,54.267662
+Liberia,7.041914
+Mali,38.951473
+Mauritania,45.25961
+Mexico,51.74587
+Morocco,16.87733
+Nicaragua,47.420197
+Niger,44.719254
+Nigeria,30.266685
+Bolivia,46.399998
+Panama,44.44688
+Paraguay,42.667797
+Peru,30.26871
+Portugal,23.009483
+Saint Kitts and Nevis,46.598457
+Saint Lucia,45.616653
+Saint Vincent and the Grenadines,48.53401
+Senegal,49.777805
+Sierra Leone,44.158463
+Suriname,44.82889
+Trinidad and Tobago,43.955276
+Tunisia,35.497932
+United Kingdom,10.639434
+United States of America,82.62497
+Uruguay,7.6122313
+Venezuela,44.675694
