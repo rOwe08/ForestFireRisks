@@ -37,9 +37,15 @@ public class PredictionManager : MonoBehaviour
 
     }
 
-    public void Predict()
+    public void PredictForDay()
     {
-        Debug.Log("Prediction started...");
+        Debug.Log("Prediction for day started...");
+        ChangeBorderColors();
+    }
+
+    public void PredictTillEnd()
+    {
+        Debug.Log("Prediction till end started...");
         ChangeBorderColors();
 
         //daysElapsed = 0;
@@ -49,8 +55,8 @@ public class PredictionManager : MonoBehaviour
         //}
 
         //predictionCoroutine = StartCoroutine(ChangePeriodCounter());
-    }
 
+    }
     private string GetFileName()
     {
         // Get the current date components
