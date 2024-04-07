@@ -132,15 +132,21 @@ public class PeriodManager : MonoBehaviour
 
     public void UpdateDateUI()
     {
+        // Format the date as "dd/MM/yyyy"
+        string formattedDate = GetFormattedDate();
+
+        // Update the text of the currentDateText UI element
+        TextDate.text = "Date: " + formattedDate;
+    }
+
+    public string GetFormattedDate()
+    {
         int day = get_day();
         int month = get_month();
         int year = get_year();
 
         // Format the date as "dd/MM/yyyy"
-        string formattedDate = "Date: " + string.Format("{0:00}/{1:00}/{2}", day, month, year);
-
-        // Update the text of the currentDateText UI element
-        TextDate.text = formattedDate;
+        string formattedDate = string.Format("{0:00}/{1:00}/{2}", day, month, year);
+        return formattedDate;
     }
-
 }

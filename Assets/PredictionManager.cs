@@ -90,6 +90,8 @@ public class PredictionManager : MonoBehaviour
         {
             // Show error message if CSV file is not found
             noDataPanel.GetComponent<PanelAnimation>().ShowPanel();
+            noDataPanel.GetComponentInChildren<Text>().text = "No data for " + periodManager.GetFormattedDate();
+
             Debug.LogError("CSV file not found: " + csvFileName);
         }
     }
