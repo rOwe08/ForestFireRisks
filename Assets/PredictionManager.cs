@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine.UI;
 using System.Drawing;
-using UnityEditor.Search;
 
 public class PredictionManager : MonoBehaviour
 {
@@ -33,12 +32,6 @@ public class PredictionManager : MonoBehaviour
         Debug.Log(borders.transform.childCount);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void PredictForDay()
     {
         periodManager.UpdateDateUI();
@@ -46,20 +39,6 @@ public class PredictionManager : MonoBehaviour
         ChangeBorderColors();
     }
 
-    public void PredictTillEnd()
-    {
-        Debug.Log("Prediction till end started...");
-        ChangeBorderColors();
-
-        //daysElapsed = 0;
-        //if (predictionCoroutine != null)
-        //{
-        //    StopCoroutine(predictionCoroutine);
-        //}
-
-        //predictionCoroutine = StartCoroutine(ChangePeriodCounter());
-
-    }
     private string GetFileName()
     {
         // Get the current date components
@@ -74,41 +53,34 @@ public class PredictionManager : MonoBehaviour
         string formattedDate = currentDate.ToString("yyyy-MM-dd");
 
         // Append ".csv" to the formatted date
-        string fileName = formattedDate + ".csv";
+        string fileName = formattedDate;
 
         return fileName;
     }
-
     // Load country prediction areas from CSV file
     // Load country prediction areas from CSV file
     private void LoadDataFromCSV()
     {
         string csvFileName = GetFileName(); // Get CSV file name
-        string csvFilePath = Path.Combine(Application.dataPath, "data", csvFileName); // Get CSV file path
+        TextAsset csvFile = Resources.Load<TextAsset>(csvFileName); // Load CSV file as TextAsset
 
-        // Check if CSV file exists
-        if (File.Exists(csvFilePath))
+        if (csvFile != null)
         {
-            // Read all lines from the CSV file
-            string[] lines = File.ReadAllLines(csvFilePath);
+            Debug.Log("CSV file loaded successfully.");
 
-            // Skip the first line (header row) and start parsing from the second line
+            // Split the text of the CSV file into lines
+            string[] lines = csvFile.text.Split('\n');
+
+            // Iterate through each line starting from the second line (skipping the header)
             for (int i = 1; i < lines.Length; i++)
             {
-                // Split the line into columns using the comma as the delimiter
                 string[] columns = lines[i].Split(',');
-
-                // Check if the line has the expected number of columns
                 if (columns.Length >= 2)
                 {
-                    // Parse country name
                     string countryName = columns[0];
-
-                    // Parse prediction area value
                     float predictionArea;
                     if (float.TryParse(columns[1], out predictionArea))
                     {
-                        // Add country prediction area to dictionary
                         countryPredictionAreas[countryName] = predictionArea;
                     }
                 }
@@ -116,20 +88,19 @@ public class PredictionManager : MonoBehaviour
         }
         else
         {
+            // Show error message if CSV file is not found
             noDataPanel.GetComponent<PanelAnimation>().ShowPanel();
-            Debug.LogError("CSV file not found: " + csvFilePath);
+            Debug.LogError("CSV file not found: " + csvFileName);
         }
     }
 
-
-    // Change border colors based on data from CSV file
     // Change border colors based on data from CSV file
     private void ChangeBorderColors()
     {
         // Load data from CSV file for the current period
         LoadDataFromCSV();
         maxValue = GetMaxValue();
-        float predictionArea = 0f;
+        float predictionArea;
         UnityEngine.Color boarderColor;
 
         // Loop through all children of the 'borders' GameObject
@@ -170,24 +141,6 @@ public class PredictionManager : MonoBehaviour
         }
     }
 
-    //private float GetMinValue()
-    //{
-    //    // Initialize the minimum value as the largest possible float value
-    //    float minValue = float.MaxValue;
-
-    //    // Iterate through the values in the dictionary
-    //    foreach (float value in countryPredictionAreas.Values)
-    //    {
-    //        // Update the minimum value if the current value is smaller
-    //        if (value < minValue)
-    //        {
-    //            minValue = value;
-    //        }
-    //    }
-
-    //    return minValue;
-    //}
-
     private float GetMaxValue()
     {
         // Initialize the maximum value as the smallest possible float value
@@ -214,18 +167,5 @@ public class PredictionManager : MonoBehaviour
 
         // Interpolate between green and red based on the normalized value
         return UnityEngine.Color.Lerp(UnityEngine.Color.green, UnityEngine.Color.red, normalizedValue);
-    }
-
-    IEnumerator ChangePeriodCounter()
-    {
-        for (int i = 0; i < periodManager.daysInMonth[periodManager.currentMonthIndex]; i++)
-        {
-            periodManager.UpdateDateUI();
-            ChangeBorderColors();
-
-            yield return new WaitForSeconds(secondsForDay);
-        }
-
-        predictionCoroutine = null;
     }
 }
