@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine.UI;
 using System.Drawing;
+using UnityEditor.Search;
 
 public class PredictionManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class PredictionManager : MonoBehaviour
     private Dictionary<string, float> countryPredictionAreas = new Dictionary<string, float>();
     private float maxValue;
 
+    public GameObject noDataPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -114,6 +116,7 @@ public class PredictionManager : MonoBehaviour
         }
         else
         {
+            noDataPanel.GetComponent<PanelAnimation>().ShowPanel();
             Debug.LogError("CSV file not found: " + csvFilePath);
         }
     }
